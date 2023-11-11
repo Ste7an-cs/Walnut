@@ -38,7 +38,7 @@ namespace Walnut {
     }
 }
 
-int WinMain(int argc, char** argv)
+int Main(int argc, char** argv)
 {
     while (g_ApplicationRunning)
     {

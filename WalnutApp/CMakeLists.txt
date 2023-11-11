@@ -11,8 +11,9 @@ include_directories(../vendor/VulkanSDK/1.3.261.1/Include)
 
 
 link_directories(../vendor/VulkanSDK/1.3.261.1/Lib)
-link_directories(../vendor/GLFW/bin/Debug-windows-x86_64/GLFW/)
-link_directories(../vendor/imgui/bin/Debug-windows-x86_64/ImGui/)
+link_directories(../vendor/GLFW/lib)
+link_directories(../vendor/imgui/lib)
+link_libraries("-framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo")
 
 add_executable(Walnutapp  src/WalnutApp.cpp)
 target_link_libraries(Walnutapp ImGui glfw3 vulkan-1 Walnut Dwmapi)

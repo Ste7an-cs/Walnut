@@ -21,10 +21,11 @@ include_directories(../vendor/stb_image)
 include_directories(../vendor/glm)
 
 include_directories(../vendor/VulkanSDK/1.3.261.1/Include)
+link_libraries("-framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo")
 
 link_directories(../vendor/VulkanSDK/1.3.261.1/Lib)
-link_directories(../vendor/GLFW/bin/Debug-windows-x86_64/GLFW/)
-link_directories(../vendor/imgui/bin/Debug-windows-x86_64/ImGui/)
+link_directories(../vendor/GLFW/lib)
+link_directories(../vendor/imgui/lib)
 add_library(Walnut STATIC ${SRC})
 target_link_libraries(Walnut ImGui glfw3 vulkan-1 Dwmapi)
 
